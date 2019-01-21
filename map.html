@@ -102,85 +102,27 @@
   font-family: 'Inter-Loom';
 
   src: url('https://cdn.useloom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2') format('woff2');
-}</style></head>
+}</style>
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+
+</head>
 	<body data-rsssl="1" class="palette-white scrolled-top" style="">
 
-<div class="panel-save panel-palette-white">
-  <div class="circle-loader">
-  </div>
+<div id='map' style="width: 100%;"></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3R5bGViaWxsaW5ncyIsImEiOiJjanE1aGc1dzQyNG95NDNwZDRjYnRxenN0In0.QIH5RYm5XBXkBF0_IxrMJg';
+const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/stylebillings/cjqplxdni0x532qpel3ljqzwg',
+center: [-7.667875, 41.342239],
+zoom: 7.8
+});
+</script>
+		
 
-  <div class="save-status status-saving">
-  </div>
-
-  <div class="save-status status-success">
-    <i>check</i>
-  </div>
-
-  <div class="save-status status-failed">
-    <i>close</i>
-  </div>
-</div>
-		<div class="template fadein-delay">
-			<section class="section-public" id="image">
-    
-    <div class="image" style="background-image: none; transform: translateY(0px);">
-      <div class="video-container">
-        <div class="fullscreen-bg"><video id="bgvid" class="fullscreen-bg__video border-radius" style="width: 100%; min-height: 100%; position: relative; top: 50%; transform: translateY(-20%);" poster="videos/wine-bg-vertical.jpg" autoplay="autoplay" loop="loop" muted="" width="100%" height="auto"><source src="videos/wine-bg-vertical.mp4"></video></div>
-      </div>
-  </div>
-   
-</section>
-
-<section id="content">
-  <div class="section-public" id="profile" style="opacity: 1; transform: translateY(0px);">
-    
-        <div class="header">
-      <div class="image" style="background-image: url(images/grapes-icon--white-bg.png); transform: translateY(0px); box-shadow: none;"></div>
-    </div>
-
-    <div style="width: 100%; max-width: 400px; margin: 0 auto; text-align: center; margin-bottom: 8px;">
-      <img src="images/bwa-logomark.png" alt="" style="width:100%;">
-    </div>
-
-    <div class="text">
-      <p>Wine School for a New World.</p>
-    </div>
-     
-
-    <div class="menu section-on" id="contact" style="transform: translateY(0px);">
-            <a class="button button-solid panel-trigger-rebase panel-forward" href="mailto:biarritzwineacademy@gmail.com">Contact Us</a>
-          </div>
-  </div>
-
-  <div class="section-on section-public" id="about">
-    
-    <div class="header">
-      <img style="width: 100%; max-width: 256px; margin-bottom: 32px;" src="images/mockup.png" alt="">
-      <h2>A New World take on Wine School.</h2>
-      <p>From the rich history of vintification in Southern France to picking the right wine at a restaurant, the Biarritz Wine Academy app is designed to make the world of wine accessible to everyone.</p> 
-      <p>Learn to taste, talk about, and discover new wines through beautiful lessons and an intelligent recommendation system based on your unique taste profile.</p> 
-      <p>Coming soon to iOS.</p>
-    </div>
-     
-  </div>
-
-  <div class="in-view-detect section-on section-public in-view-viewed" id="newsletter">
-    
-        <div class="header">
-      <h2>Keep in touch.</h2>
-      <p>Join our mailing list for the most essential updates from the Biarritz Wine Academy, including opportunities for beta testing, content partnerships, and careers.</p>      <a class="button button-solid" href="http://eepurl.com/dPbL0f">Join the list</a>
-    </div>
-     
-  </div>
-</section>
-          </div>
-
-    <div class="page-load fadeout-delay">
-      <div class="circle-loader">
-      </div>
-    </div>
-
-    <script type="text/javascript" src="./bwa_files/jquery.js"></script>
+<script type="text/javascript" src="./bwa_files/jquery.js"></script>
 <script type="text/javascript" src="./bwa_files/jquery-ui.js"></script>
 <script type="text/javascript" src="./bwa_files/script-min.js"></script>
 <script type="text/javascript" src="./bwa_files/script-public-min.js"></script>
